@@ -1,0 +1,11 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "studentapi.fullname" . }}-pdb
+  labels:
+    {{- include "studentapi.labels" . | nindent 4 }}
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      {{- include "studentapi.selectorLabels" . | nindent 6 }}

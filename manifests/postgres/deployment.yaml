@@ -29,6 +29,13 @@ spec:
                 secretKeyRef:
                   name: postgres-secret
                   key: POSTGRES_PASSWORD
+          resources:
+            limits:
+              cpu: 250m
+              memory: 256Mi
+            requests:
+              cpu: 50m
+              memory: 64Mi
           volumeMounts:
             - name: init-scripts
               mountPath: /docker-entrypoint-initdb.d
