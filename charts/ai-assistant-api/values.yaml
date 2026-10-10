@@ -5,7 +5,7 @@ image:
   repository: ghcr.io/prospjx/ai-assistant-api
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "v28"
 
 nameOverride: ""
 fullnameOverride: "ai-assistant-api"
