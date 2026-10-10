@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: ghcr.io/prospjx/course-api
   pullPolicy: IfNotPresent
-  tag: "latest"
+  tag: "v14"
 
 service:
   type: ClusterIP
