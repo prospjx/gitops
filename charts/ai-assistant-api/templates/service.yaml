@@ -2,6 +2,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ include "ai-assistant-api.fullname" . }}-service
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "{{ .Values.service.port }}"
+    prometheus.io/path: "/metrics"
   labels:
     {{- include "ai-assistant-api.labels" . | nindent 4 }}
 spec:
