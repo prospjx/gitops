@@ -4,7 +4,7 @@ replicaCount: 1
 image:
   repository: ghcr.io/prospjx/scheduler-api
   pullPolicy: IfNotPresent
-  tag: "v20"
+  tag: "v21"
 
 imagePullSecrets: []
 nameOverride: "schedulerapi"
